@@ -1,0 +1,38 @@
+
+
+.mat-column-nombre {
+    padding-left: 16px;
+    padding-right: 80px;
+    font-size: 17px;
+}
+
+.mat-column-departamento {
+    padding-right: 60px;
+    font-size: 15px;
+}
+
+.mat-column-direccion {
+    padding-right: 60px;
+    font-size: 13px;
+    color:DDDDDD;
+}
+
+.demo-table {
+    width: 100%;
+}
+  
+.mat-row .mat-cell {
+    border-bottom: 0.5px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+}
+  
+  .mat-row:hover .mat-cell {
+    border-color: currentColor;
+    background-color: #F0F0F0;
+  }
+  
+  .demo-row-is-clicked {
+    font-weight: bold;
+    
+  }

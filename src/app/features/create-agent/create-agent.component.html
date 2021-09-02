@@ -1,0 +1,56 @@
+<form class="example-form" name="registerForm" [formGroup]="registerAgentForm" (ngSubmit)="onSubmitAgent()" #formDirective="ngForm">
+
+    <mat-form-field appearance="fill">
+        <mat-label>Nombre de Agencia</mat-label>
+        <input formControlName="agentForm" matInput>
+        <mat-error *ngIf="registerAgentForm.controls['agentForm'].hasError('required')">
+            Ingrese nombre de agencia
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Dirección</mat-label>
+        <input formControlName="locationForm" matInput>
+        <mat-error *ngIf="registerAgentForm.controls['locationForm'].hasError('required')">
+            Ingrese dirección
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Distrito</mat-label>
+        <input formControlName="districtForm" matInput>
+        <mat-error *ngIf="registerAgentForm.controls['districtForm'].hasError('required')">
+            Ingrese distrito
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Provincia</mat-label>
+        <input formControlName="provinceForm" matInput>
+        <mat-error *ngIf="registerAgentForm.controls['provinceForm'].hasError('required')">
+            Ingrese provincia
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Departamento</mat-label>
+        <input formControlName="deparmentForm" matInput>
+        <mat-error *ngIf="registerAgentForm.controls['deparmentForm'].hasError('required')">
+            Ingrese departamento
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Latitud</mat-label>
+        <input formControlName="latitudeForm" matInput>
+        <mat-error *ngIf="registerAgentForm.controls['latitudeForm'].hasError('required')">
+            Ingrese latitud
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Longitud</mat-label>
+        <input formControlName="lenghtForm" matInput>
+        <mat-error *ngIf="registerAgentForm.controls['lenghtForm'].hasError('required')">
+            Ingrese longitud
+        </mat-error>
+    </mat-form-field>
+
+    <div class="example-button-row">
+        <button (click)="onSubmitAgent()" type="submit" mat-raised-button color="primary">Guardar</button>
+    </div>
+</form>
