@@ -9,9 +9,6 @@ import { Agent } from 'src/app/core/interfaces/agent';
 import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
 
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
-
 
 @Component({
   selector: 'app-list-agents',
@@ -19,7 +16,8 @@ import {MatIconModule} from '@angular/material/icon';
   styleUrls: ['./list-agents.component.css']
 })
 export class ListAgentsComponent implements OnInit {
-
+  activeloadingfull = true;
+  loading: boolean;
   agents: Agent[] = [];
   displayedColumns: string[] = [];
   
@@ -29,6 +27,7 @@ export class ListAgentsComponent implements OnInit {
 
   constructor(private agentService: AgentsService, public dialog: MatDialog, private router: Router,) { 
 
+    this.loading = true;
     this.displayedColumns = ['nombre', 'departamento', 'direccion'];
   }
 
@@ -36,6 +35,7 @@ export class ListAgentsComponent implements OnInit {
 
   ngOnInit(): void {
     this.initData()
+    this.activeloadingfull = false;
   }
 
   initData(){
@@ -44,7 +44,6 @@ export class ListAgentsComponent implements OnInit {
   }
 
   setDataSource(){
-    console.log('dataaaaaa', this.dataAgents);
     this.dataSource = new MatTableDataSource(this.dataAgents);
     this.dataSource.paginator = this.paginator;
   }
@@ -54,7 +53,6 @@ export class ListAgentsComponent implements OnInit {
   }
 
   editAgent(agents: Agent){
-    console.log('Agente', agents);
     this.router.navigate(['/editAgent'])
   }
 }

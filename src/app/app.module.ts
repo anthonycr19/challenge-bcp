@@ -24,6 +24,7 @@ import {MatIconModule} from '@angular/material/icon';
 
 // Forms
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared/shared.module';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ListAgentsComponent,
     CreateAgentComponent,
     EditAgentComponent,
-    DashboardComponent
+    DashboardComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

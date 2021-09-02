@@ -33,3 +33,169 @@ $reto-bcp-theme: mat-light-theme((
 // that you are using.
 @include angular-material-theme($reto-bcp-theme);
 
+/* You can add global styles to this file, and also import other style files */
+
+/* Animaciones */
+
+.fondo-loadingfull{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1100;
+  // pointer-events: none;
+  opacity: 0.48;
+  background: rgba(0, 0, 0, 0.6);
+}
+.content-loadingfull{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1110;
+  // pointer-events: none;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.spinner {
+width: 40px;
+height: 40px;
+
+position: relative;
+margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+width: 100%;
+height: 100%;
+border-radius: 50%;
+background-color: #fff;
+opacity: 0.6;
+position: absolute;
+top: 0;
+left: 0;
+
+-webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+-webkit-animation-delay: -1.0s;
+animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+0%, 100% { -webkit-transform: scale(0.0) }
+50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+0%, 100% { 
+  transform: scale(0.0);
+  -webkit-transform: scale(0.0);
+} 50% { 
+  transform: scale(1.0);
+  -webkit-transform: scale(1.0);
+}
+}
+
+/*
+Loader FIRBID
+*/
+/* Esta seccion es lo que esta en codepen
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background: #000000;
+}
+*/
+//CSS Loader FIRBID
+//@keyframes quitarBordeCirculo {
+//  80% { background-color: #000000;
+//      border-color: #DBE1EB; }
+//  81% { border-color: #000000;}
+//  92% { background-color: white;}
+//  100% { background-color: white;
+//      border-color: #000000;}
+//}
+//
+//.circulo {
+//  position: absolute;
+//  box-sizing: border-box;
+//  display: flex;
+//  flex-direction: column;
+//  align-items: center;
+//  justify-content: center;
+//  width: 10rem;
+//  height: 10rem;
+//  border: 0.6rem solid #DBE1EB;
+//  background-color: #000000;
+//  border-radius: 50%;
+//  margin: auto;
+//  font-family: 'Roboto';
+//  font-weight: bolder;
+//  font-size: 2.5rem;
+//  animation: quitarBordeCirculo linear 5s both;
+//  color: #201835;
+//}
+//
+//.letra-i {
+//  color: #9A68FF;
+//}
+//
+//@keyframes cargar {
+//  0%{ clip-path: polygon(50%  50%, 50% -50%, 50% -50%, 50% -50%, 50% -50%, 50% -50%) }
+//  20%{ clip-path: polygon(50% 50%, 150% 50%, 50% -50%, 50% -50%, 50% -50%, 50% -50%) }
+//  40%{ clip-path: polygon(50% 50%, 50% 150%, 150% 50%, 50% -50%, 50% -50%, 50% -50%) }
+//  60%{ clip-path: polygon(50% 50%, -50% 50%, 50% 150%, 150% 50%, 50% -50%, 50% -50%) }
+//  80%{ clip-path: polygon(50% 50%, 50% -50%, -50% 50%, 50% 150%, 150% 50%, 50% -50%) }
+//  90%{ transform: scale(1, 1); }
+//  93%{ transform: scale(0.9, 0.9); }
+//  96%{ transform: scale(1, 1);}
+//}
+//
+//.progreso {
+//  position: absolute;
+//  box-sizing: border-box;
+//  width: 10rem;
+//  height: 10rem;
+//  border: 0.6rem solid #9969FF;
+//  border-radius: 50%;
+//  animation: cargar linear 5s both;
+//}
+//
+//@keyframes expandir {
+//  96%{ transform: scale(1, 1);
+//      opacity: 0;
+//      border-width: 1rem;}
+//  100%{ transform: scale(1.3, 1.3);
+//      opacity: 1;
+//      border-width: 0.1rem;}
+//}
+//
+//.progreso-2 {
+//  position: absolute;
+//  box-sizing: border-box;
+//  width: 10rem;
+//  height: 10rem;
+//  border: 0.3rem solid #9969FF;
+//  border-radius: 50%;
+//  animation: expandir linear 5s both;
+//  opacity: 0;
+//}
+//
+//.letra {
+//  display: flex;
+//  flex-direction: row;
+//}

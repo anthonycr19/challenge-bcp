@@ -12,7 +12,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class AppComponent {
   title = 'reto-bcp';
-  
+  activeloadingfull = true;
   constructor(private agentService: AgentsService, public dialog: MatDialog, private router: Router,){
 
   }
@@ -21,6 +21,9 @@ export class AppComponent {
   }
 
   initData(){
+    setTimeout(() => {
+      this.activeloadingfull = false;
+    }, 2000);
     this.agentService.getAgents().subscribe(agents=>{
       let count = 0;
       agents.forEach(agent=> {
